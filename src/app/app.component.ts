@@ -53,7 +53,7 @@ export class AppComponent {
   }
 
   checkWord() {
-    if (this.userWord === this.actualWord) {
+    if (this.userWord.toLowerCase() === this.actualWord.toLowerCase()) {
       this.correctWords++;
       this.completeLevel++;
 
