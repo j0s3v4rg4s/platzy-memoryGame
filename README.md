@@ -4,6 +4,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2. It use material icons and Tailwindcss.
 
+[Here](https://mystifying-clarke-b3992e.netlify.app) you can view the project
+
 ## Instructions
 1.  Clone the repository `git clone https://github.com/j0s3v4rg4s/platzy-memoryGame.git`
 
