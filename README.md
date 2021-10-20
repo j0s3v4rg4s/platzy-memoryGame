@@ -1,5 +1,7 @@
 # Memory Game
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18965400-a9af-4e77-8176-821f64da8513/deploy-status)](https://app.netlify.com/sites/mystifying-clarke-b3992e/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2. It use material icons and Tailwindcss.
 
 ## Instructions
