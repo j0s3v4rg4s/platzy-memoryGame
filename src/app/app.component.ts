@@ -9,7 +9,6 @@ import { Level } from './interfaces/level.interface';
 })
 export class AppComponent {
   totalLives = GAME_CONSTANTS.lives;
-  title = 'memoryGame';
   actualLevel: Level;
   startGame = false;
   correctWords = 0;

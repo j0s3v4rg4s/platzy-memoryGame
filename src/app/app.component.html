@@ -1,15 +1,20 @@
-<div class="h-screen bg-gray-200 flex">
+<div class="h-screen bg-gray-200 flex p-5 overflow-y-scroll">
   <div class="m-auto max-w-screen-sm w-full">
-    <div class="flex items-center mb-2">
+    <div class="flex items-center mb-2 flex-col sm:flex-row">
       <h1 class="text-3xl text-gray-600 flex-1">Memory game</h1>
       <span class="text-base"> Correct words {{ correctWords }} </span>
     </div>
     <div class="h-80 bg-white rounded shadow p-4 relative">
-
-      <div class="absolute inset-0 bg-pink-400 z-10 opacity-50 flex" *ngIf="lostGame">
-        <span class="uppercase text-pink-600 text-8xl m-auto italic">Game End</span>
+      <div
+        class="absolute inset-0 bg-pink-400 z-10 opacity-50 flex"
+        *ngIf="lostGame"
+      >
+        <span
+          class="uppercase text-pink-600 sm:text-8xl text-5xl m-auto italic"
+        >
+          Game End
+        </span>
       </div>
-
 
       <span
         *ngIf="showWord"
@@ -20,7 +25,8 @@
           text-gray-700
           px-4
           py-1
-          text-5xl
+          sm:text-5xl
+          text-3xl
         "
       >
         {{ actualWord }}
@@ -48,7 +54,7 @@
       </div>
     </div>
 
-    <div class="mt-4 flex space-x-4">
+    <div class="mt-4 flex sm:space-x-4 flex-col space-y-2 sm:flex-row">
       <input
         [disabled]="showWord || lostGame"
         type="text"
@@ -59,21 +65,23 @@
           focus:ring-pink-200 focus:ring-4 focus:border-pink-400
           border-2
           p-2
-          w-64
+          sm:w-64
+          w-full
         "
         placeholder="Write the word"
         [(ngModel)]="userWord"
       />
 
-      <div class="flex-auto">
-        <button
-          class="btn pink"
-          [disabled]="showWord || !startGame || lostGame"
-          (click)="checkWord()"
-        >
-          Check
-        </button>
-      </div>
+      <button
+        class="btn pink"
+        [disabled]="showWord || !startGame || lostGame"
+        (click)="checkWord()"
+      >
+        Check
+      </button>
+
+      <span class="hidden sm:block flex-auto"></span>
+
       <button *ngIf="!startGame" (click)="initGame()" class="btn green">
         start
       </button>
